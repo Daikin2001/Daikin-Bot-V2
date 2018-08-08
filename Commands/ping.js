@@ -1,27 +1,15 @@
 exports.run = (client, msg, args) => {
-    function format(seconds){
-        function pad(s){
-          return (s < 10 ? '0' : '') + s;
-        }
-        var hours = Math.floor(seconds / (60*60));
-        var minutes = Math.floor(seconds % (60*60) / 60);
-        var seconds = Math.floor(seconds % 60);
-      
-        return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
-      }
-      
-      var uptime = process.uptime();
 
-    msg.channel.send(`Please wait until we check the bot's latency...`).then(function(m) {
+msg.channel.send(`Please wait until we check the bot's latency...`).then(function(m) {
         m.edit({embed: {
-            color: 0xd45555,
+            color: 0xDCA741,
             author: {
               name: client.user.username,
               icon_url: client.user.avatarURL
             },
-            description: `:ping_pong: **Melon** by BriciWorld, Casbas 234, and Hydrogen, is running for ${format(uptime)}. Serving ${client.users.size} users in ${client.guilds.size} servers. :dizzy:`,
+            description: `:ping_pong: Pong!`,
             footer: {
-              text: `This took me ${m.createdTimestamp - msg.createdTimestamp}ms`
+              text: `This took me ${m.createdTimestamp - msg.createdTimestamp}ms | Heartbeat: ${Math.round(client.ping)}ms`
                 }
             }
         });
