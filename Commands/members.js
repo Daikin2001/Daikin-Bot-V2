@@ -1,7 +1,7 @@
 exports.run = (client, msg, args) => {
      
     msg.channel.send({embed: {
-        color: 0xd45555,
+        color: 0xDCA741,
         title: `:desktop: This server has...`,
         description: msg.guild.memberCount + " members.",
         }
