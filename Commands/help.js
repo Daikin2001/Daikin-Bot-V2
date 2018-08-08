@@ -35,7 +35,7 @@ let embed = new Discord.RichEmbed()
 
 msg.author.send(embed);
 msg.channel.send({embed: {
-        color: 0xd45555,
+        color: 0xDCA741,
         title: `Check DMs :mailbox:`,
         }
     });
