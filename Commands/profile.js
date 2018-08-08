@@ -5,7 +5,7 @@ exports.run = (client, msg, args) => {
     
     if(user) {
       msg.channel.send({embed: {
-        color: 0xd45555,
+        color: 0xDCA741,
         title: `:bust_in_silhouette: User information:`,
         thumbnail: {
           url: user.avatarURL
@@ -33,7 +33,7 @@ exports.run = (client, msg, args) => {
     });
     } else {
 msg.channel.send({embed: {
-    color: 0xd45555,
+    color: 0xDCA741,
     title: `:bust_in_silhouette: User information:`,
     thumbnail: {
       url: msg.author.avatarURL
