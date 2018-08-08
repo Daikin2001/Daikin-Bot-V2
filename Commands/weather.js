@@ -21,25 +21,15 @@ exports.run = (client, msg, args) => {
       var location = result[0].location;
 
 msg.channel.send({embed: {
-    color: 0xd45555,
-    title: `:white_sun_small_cloud: Weather for ${current.observationpoint}.`,
-    description: `**${current.skytext}**`,
+    color: 0xDCA741,
+    title: `:white_sun_small_cloud: ${current.observationpoint} | ${current.temperature}°${location.degreetype}`,
+    description: `Feels like  ${current.feelslike}°${location.degreetype}`,
     thumbnail: {
         url: current.imageUrl
          },
       fields: [{
-        name: "Temperature",
-        value: `**Current temperature**: ${current.temperature} degress \n**Feels like**: ${current.feelslike} degress`,
-        inline: true
-      },
-      {
-        name: "Degree Type",
-        value: `${location.degreetype}`,
-        inline: true
-      },
-      {
-        name: ":clock3: Timezone",
-        value: `GMT${location.timezone}`,
+        name: ":black_circle: Currently",
+        value: `${current.skytext}`,
         inline: true
       },
       {
@@ -48,11 +38,20 @@ msg.channel.send({embed: {
         inline: true
       },
       {
+        name: ":clock3: Timezone",
+        value: `GMT${location.timezone}`,
+        inline: true
+      },
+      {
         name: ":wind_chime: Winds",
         value: `${current.winddisplay}`,
         inline: true
       },
     ],
+    footer: {
+      icon_url: "http://logok.org/wp-content/uploads/2014/07/MSN-logo-butterfly-880x660.png",
+      text: `Powered by MSN Weather`
+        }
     }
 });
 
