@@ -6,8 +6,8 @@ exports.run = (client, msg, args, config) => {
 let embed = new Discord.RichEmbed()
        
 .setAuthor(client.user.username, client.user.avatarURL)
-.setColor("#d45555")
-.setDescription("Here you can see the commands for Melon!")
+.setColor("#DCA741")
+.setDescription("Here you can see the commands for " + client.user.username + "!")
 .addField(`+help`, "Shows this list")
 .addField(`+rps`, "Play rock, paper, scissors!")
 .addField(`+8ball`, "Ask something to the magic 8ball. Usage: `+8ball <question>`")
@@ -30,6 +30,8 @@ let embed = new Discord.RichEmbed()
 .addField(`+flipcoin`, "Flip a coin")
 .addField(`+fact`, "Shows a random fact")
 .addField(`+members`, "Shows the current server's member count")
+.addField(`+cowsay`, "Says something to the chat as a cow! Usage: `+cowsay <text>`")
+.addField(`+stats`, "Shows the stats for this bot")
 
 msg.author.send(embed);
 msg.channel.send({embed: {
