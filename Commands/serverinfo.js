@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 exports.run = (client, msg, args) => {
 msg.channel.send({embed: {
-    color: 0xd45555,
+    color: 0xDCA741,
     title: `:desktop: Server information:`,
     thumbnail: {
       url: msg.guild.iconURL
