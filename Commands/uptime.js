@@ -13,7 +13,7 @@ exports.run = (client, msg, args) => {
       var uptime = process.uptime();
 
     msg.channel.send({embed: {
-        color: 0xd45555,
+        color: 0xDCA741,
       title: ":clock3: Uptime",
         description: `${client.user.username} is running for ${format(uptime)}.`,
         }
