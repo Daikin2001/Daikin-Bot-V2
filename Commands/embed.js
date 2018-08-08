@@ -5,9 +5,9 @@ exports.run = (client, msg, args) => {
     let text = args.join(" ");
     msg.delete(),
 msg.channel.send({embed: {
-    color: 0xd45555,
+    color: 0xDCA741,
     author: {
-        name: msg.author.username + " says...",
+        name: msg.author.username,
         icon_url: msg.author.avatarURL
       },
 description: text,
