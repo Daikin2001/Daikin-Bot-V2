@@ -32,7 +32,7 @@ responses = [
 
 
     let embed = new Discord.RichEmbed()
-    .setTitle(":8ball: The 8ball replied:")
+    .setTitle(":8ball: The 8ball replied")
     .setColor("#00ff00")
     .setDescription((responses[Math.floor(Math.random() * responses.length)]))
     msg.channel.send(embed);
